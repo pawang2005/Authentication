@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Garbage Management System</title>
+    
+  </head>
+  <body>
+    <div class="content">
+      <div class="signup-box">
+        
+        <h2>Sign Up</h2>
+        <% if (locals.message) { %>
+        <div class="error-message"><%= message %></div>
+        <% } %>
+        <form action="/signup" method="post">          
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            id="name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            id="email"
+            required
+          />
+          <input
+            type="date"
+            placeholder="Date of Birth"
+            name="date"
+            id="date"
+            required
+          />
+          <input
+            type="password"
+            placeholder="New password"
+            name="password"
+            id="password"
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+        <a href="/signin">SignIn Here</a>
+      </div>
+    </div>
+  </body>
+</html>

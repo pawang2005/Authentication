@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - Garbage Management System</title>     
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="signin-box">
+        <% if (locals.error) { %>
+        <div class="error-message"><%= error %></div>
+        <% } %>
+
+        <form action="/signin" method="post">
+          <input type="email" placeholder="Email" required name="email" />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            name="password"
+          />
+          <button type="submit">Log In</button>
+        </form>
+        <a href="/signup">Signup Here</a>
+      </div>
+    </div>
+  </body>
+</html>
